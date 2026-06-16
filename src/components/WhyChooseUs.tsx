@@ -48,7 +48,7 @@ export default function WhyChooseUs() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section className="section bg-white relative overflow-hidden">
+    <section className="section bg-primary-pale/20 relative overflow-hidden">
       <div className="absolute top-40 left-0 w-72 h-72 bg-primary-pale/30 rounded-full blur-3xl" />
       <div className="absolute bottom-40 right-0 w-72 h-72 bg-primary-lighter/10 rounded-full blur-3xl" />
 

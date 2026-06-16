@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply font-body text-secondary bg-surface text-base antialiased;
+    @apply font-body text-secondary bg-primary-pale/20 text-base antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -23,10 +23,6 @@
 
   .gradient-bg {
     @apply bg-gradient-to-br from-primary via-primary-light to-primary-lighter;
-  }
-
-  .gradient-bg-subtle {
-    @apply bg-gradient-to-br from-primary-pale/40 via-primary-pale/20 to-transparent;
   }
 
   .badge {
@@ -53,8 +49,8 @@
   }
 
   .card {
-    @apply bg-white rounded-2xl border border-neutral-dark/30 shadow-soft hover:shadow-card-hover 
-           transition-all duration-300;
+    @apply bg-white/80 rounded-2xl border border-primary-pale/30 shadow-soft hover:shadow-card-hover 
+           backdrop-blur-sm transition-all duration-300;
   }
 
   .card-lg {
@@ -75,9 +71,9 @@
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D1D5DB;
+  background: #C4B5FD;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #9CA3AF;
+  background: #A78BFA;
 }

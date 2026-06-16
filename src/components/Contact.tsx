@@ -43,7 +43,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="section bg-surface-muted relative overflow-hidden">
+    <section id="contact" className="section bg-primary-pale/35 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-80 h-80 bg-primary-lighter/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-60 h-60 bg-primary-pale/20 rounded-full blur-3xl" />
 
@@ -136,7 +136,7 @@ export default function Contact() {
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-secondary mb-1.5">Full Name *</label>
                 <input id="name" type="text" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  className={`w-full px-4 py-3 rounded-xl bg-surface-muted border ${errors.name ? "border-red-400" : "border-neutral-dark/40"} focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all text-secondary text-sm`}
+                  className={`w-full px-4 py-3 rounded-xl bg-white/70 border ${errors.name ? "border-red-400" : "border-neutral-dark/40"} focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all text-secondary text-sm`}
                   placeholder="Your full name" />
                 {errors.name && <p className="text-red-400 text-xs mt-1">{errors.name}</p>}
               </div>
@@ -145,14 +145,14 @@ export default function Contact() {
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-secondary mb-1.5">Email Address *</label>
                   <input id="email" type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    className={`w-full px-4 py-3 rounded-xl bg-surface-muted border ${errors.email ? "border-red-400" : "border-neutral-dark/40"} focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all text-secondary text-sm`}
+                    className={`w-full px-4 py-3 rounded-xl bg-white/70 border ${errors.email ? "border-red-400" : "border-neutral-dark/40"} focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all text-secondary text-sm`}
                     placeholder="your@email.com" />
                   {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email}</p>}
                 </div>
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-secondary mb-1.5">Phone Number *</label>
                   <input id="phone" type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                    className={`w-full px-4 py-3 rounded-xl bg-surface-muted border ${errors.phone ? "border-red-400" : "border-neutral-dark/40"} focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all text-secondary text-sm`}
+                    className={`w-full px-4 py-3 rounded-xl bg-white/70 border ${errors.phone ? "border-red-400" : "border-neutral-dark/40"} focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all text-secondary text-sm`}
                     placeholder="(203) 555-0123" />
                   {errors.phone && <p className="text-red-400 text-xs mt-1">{errors.phone}</p>}
                 </div>
@@ -161,7 +161,7 @@ export default function Contact() {
               <div>
                 <label htmlFor="careNeeds" className="block text-sm font-medium text-secondary mb-1.5">Care Needs *</label>
                 <select id="careNeeds" value={form.careNeeds} onChange={(e) => setForm({ ...form, careNeeds: e.target.value })}
-                  className={`w-full px-4 py-3 rounded-xl bg-surface-muted border ${errors.careNeeds ? "border-red-400" : "border-neutral-dark/40"} focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all text-secondary text-sm`}
+                  className={`w-full px-4 py-3 rounded-xl bg-white/70 border ${errors.careNeeds ? "border-red-400" : "border-neutral-dark/40"} focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all text-secondary text-sm`}
                 >
                   <option value="">Select care needs...</option>
                   <option value="personal-care">Personal Care Assistance</option>
@@ -177,7 +177,7 @@ export default function Contact() {
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-secondary mb-1.5">Message *</label>
                 <textarea id="message" rows={4} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  className={`w-full px-4 py-3 rounded-xl bg-surface-muted border ${errors.message ? "border-red-400" : "border-neutral-dark/40"} focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all text-secondary text-sm resize-none`}
+                  className={`w-full px-4 py-3 rounded-xl bg-white/70 border ${errors.message ? "border-red-400" : "border-neutral-dark/40"} focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all text-secondary text-sm resize-none`}
                   placeholder="Tell us about your care needs..." />
                 {errors.message && <p className="text-red-400 text-xs mt-1">{errors.message}</p>}
               </div>

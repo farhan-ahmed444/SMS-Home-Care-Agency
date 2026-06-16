@@ -14,7 +14,7 @@ export default function Registration() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section className="section bg-surface-muted relative overflow-hidden">
+    <section className="section bg-primary-pale/20 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary-lighter/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-primary-pale/20 rounded-full blur-3xl" />
 
@@ -48,7 +48,7 @@ export default function Registration() {
               </div>
             </div>
 
-            <div className="bg-surface-muted rounded-xl p-6 border border-primary/10 mb-6">
+            <div className="bg-white/70 rounded-xl p-6 border border-primary/10 mb-6">
               <p className="text-xs text-secondary-lighter/60 mb-1.5 font-medium uppercase tracking-wider">Connecticut Home Care Registration Number</p>
               <p className="text-xl sm:text-2xl font-heading font-bold text-primary tracking-wider">
                 [INSERT CT REGISTRATION NUMBER]

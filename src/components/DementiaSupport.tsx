@@ -16,7 +16,7 @@ export default function DementiaSupport() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section className="section bg-surface-muted relative overflow-hidden">
+    <section className="section bg-primary-pale/35 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary-pale/30 via-transparent to-primary-lighter/10" />
 
       <div className="container-custom" ref={ref}>
@@ -71,7 +71,7 @@ export default function DementiaSupport() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 to-transparent" />
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-card p-4 border border-neutral-dark/20 max-w-[220px]">
+              <div className="absolute -bottom-4 -left-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-card p-4 border border-primary-pale/30 max-w-[220px]">
                 <div className="flex items-center gap-2 font-semibold text-primary mb-1">
                   <Heart className="w-4 h-4" fill="#6D28D9" />
                   <span className="text-sm">Memory Care Certified</span>

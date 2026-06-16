@@ -14,7 +14,7 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="section bg-surface-muted relative overflow-hidden">
+    <section id="about" className="section bg-primary-pale/35 relative overflow-hidden">
       <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-lighter/5 rounded-full blur-3xl" />
       <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-pale/20 rounded-full blur-3xl" />
 
@@ -49,7 +49,7 @@ export default function About() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/30 to-transparent" />
               </div>
-              <div className="absolute -bottom-5 -right-5 bg-white rounded-xl shadow-card p-4 border border-neutral-dark/20 hidden sm:block">
+              <div className="absolute -bottom-5 -right-5 bg-white/80 backdrop-blur-sm rounded-xl shadow-card p-4 border border-primary-pale/30 hidden sm:block">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full gradient-bg flex items-center justify-center">
                     <Phone className="w-5 h-5 text-white" />

@@ -41,7 +41,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="section bg-white relative overflow-hidden">
+    <section id="testimonials" className="section bg-primary-pale/20 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-primary-pale/20 rounded-full blur-3xl" />
 
       <div className="container-custom" ref={ref}>

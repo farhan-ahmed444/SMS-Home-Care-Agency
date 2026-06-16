@@ -15,7 +15,7 @@ export default function CareProcess() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="process" className="section bg-white relative overflow-hidden">
+    <section id="process" className="section bg-primary-pale/35 relative overflow-hidden">
       <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[60rem] h-[60rem] bg-primary-pale/20 rounded-full blur-3xl" />
 
       <div className="container-custom" ref={ref}>

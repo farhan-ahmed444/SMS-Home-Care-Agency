@@ -35,7 +35,7 @@ export default function FAQ() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section className="section bg-white relative overflow-hidden">
+    <section className="section bg-primary-pale/35 relative overflow-hidden">
       <div className="container-custom max-w-3xl" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

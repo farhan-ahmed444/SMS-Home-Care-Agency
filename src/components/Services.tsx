@@ -20,7 +20,7 @@ export default function Services() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="services" className="section bg-surface-muted relative overflow-hidden">
+    <section id="services" className="section bg-primary-pale/20 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary-lighter/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-primary-pale/20 rounded-full blur-3xl" />
 

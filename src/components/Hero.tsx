@@ -10,9 +10,9 @@ const features = [
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-surface-muted">
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-primary-pale/20">
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-pale/60 via-surface-muted to-white z-10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-pale/50 via-primary-pale/20 to-primary-pale/30 z-10" />
         <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-primary-lighter/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-[30rem] h-[30rem] bg-primary-pale/30 rounded-full blur-3xl" />
         <div
@@ -78,7 +78,7 @@ export default function Hero() {
               className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3"
             >
               {features.map((f) => (
-                <div key={f.label} className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white/70 border border-neutral-dark/20 shadow-soft">
+                <div key={f.label} className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white/60 border border-primary-pale/30 shadow-soft">
                   <f.icon className="w-4 h-4 text-primary shrink-0" />
                   <span className="text-xs font-semibold text-secondary">{f.label}</span>
                 </div>
@@ -101,7 +101,7 @@ export default function Hero() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 via-transparent to-transparent" />
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-card p-4 border border-neutral-dark/20">
+              <div className="absolute -bottom-4 -left-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-card p-4 border border-primary-pale/30">
                 <div className="flex items-center gap-3">
                   <div className="w-11 h-11 rounded-lg gradient-bg flex items-center justify-center">
                     <ShieldCheck className="w-5 h-5 text-white" />
