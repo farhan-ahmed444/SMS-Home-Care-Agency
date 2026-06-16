@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Brain, Shield, Clock, Heart, MessageCircle, Sparkles } from "lucide-react";
 
 const features = [
@@ -16,7 +17,12 @@ export default function DementiaSupport() {
 
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div data-reveal>
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5 }}
+          >
             <span className="badge bg-primary-pale text-primary border border-primary/10 mb-4">Dementia & Family Support</span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-secondary mt-3 mb-5">
               Specialized <span className="gradient-text">Memory Care</span> Support
@@ -27,9 +33,16 @@ export default function DementiaSupport() {
               maintain their quality of life while giving families the peace of mind they deserve.
             </p>
 
-            <div data-stagger="0.06" className="grid sm:grid-cols-2 gap-3">
-              {features.map((f) => (
-                <div key={f.title} className="card p-4 flex items-start gap-3">
+            <div className="grid sm:grid-cols-2 gap-3">
+              {features.map((f, i) => (
+                <motion.div
+                  key={f.title}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-20px" }}
+                  transition={{ duration: 0.35, delay: i * 0.06 }}
+                  className="card p-4 flex items-start gap-3"
+                >
                   <div className="w-9 h-9 rounded-lg gradient-bg p-2 shrink-0">
                     <f.icon className="w-full h-full text-white" />
                   </div>
@@ -37,12 +50,17 @@ export default function DementiaSupport() {
                     <h4 className="text-sm font-bold text-secondary">{f.title}</h4>
                     <p className="text-xs text-secondary-lighter/60 mt-0.5">{f.description}</p>
                   </div>
-                </div>
-              ))}
+                </motion.div>
+            ))}
             </div>
-          </div>
+          </motion.div>
 
-          <div data-reveal data-delay="0.15">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+          >
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-elevated">
                 <img
@@ -62,7 +80,7 @@ export default function DementiaSupport() {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

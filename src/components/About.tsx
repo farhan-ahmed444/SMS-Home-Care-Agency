@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Heart, ShieldCheck, Clock, Users, Phone, ArrowRight } from "lucide-react";
 
 const stats = [
@@ -14,7 +15,13 @@ export default function About() {
       <div data-parallax data-speed="0.3" className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-pale/20 rounded-full blur-3xl" />
 
       <div className="container-custom">
-        <div data-reveal className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
           <span className="badge bg-primary-pale text-primary border border-primary/10 mb-4">About Us</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-secondary mt-3">
             Dedicated to <span className="gradient-text">Exceptional Care</span>
@@ -22,10 +29,14 @@ export default function About() {
           <p className="mt-4 text-lg text-secondary-lighter/70 max-w-2xl mx-auto">
             Every family deserves peace of mind knowing their loved ones are in capable, compassionate hands.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div data-reveal data-delay="0.15"
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.15 }}
           >
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-elevated">
@@ -48,9 +59,14 @@ export default function About() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div data-reveal data-delay="0.2">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <h3 className="text-2xl sm:text-3xl font-heading font-bold text-secondary mb-5">
               Our Story
             </h3>
@@ -88,23 +104,31 @@ export default function About() {
               Learn more about us
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
-          </div>
+          </motion.div>
         </div>
 
-        <div data-reveal data-delay="0.4" className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4"
+        >
           {stats.map((stat, i) => (
-            <div
+            <motion.div
               key={stat.label}
-              data-reveal
-              data-delay={0.5 + i * 0.08}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-30px" }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
               className="card p-6 text-center"
             >
               <stat.icon className="w-6 h-6 text-primary mx-auto mb-2" />
               <p className="text-2xl font-bold font-heading text-secondary">{stat.value}</p>
               <p className="text-xs text-secondary-lighter/60 mt-0.5">{stat.label}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
