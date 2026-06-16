@@ -44,9 +44,9 @@ const cards = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="section bg-primary-washed relative overflow-hidden">
-      <div data-parallax data-speed="0.15" className="absolute top-40 left-0 w-72 h-72 bg-primary-pale/30 rounded-full blur-3xl" />
-      <div data-parallax data-speed="0.25" className="absolute bottom-40 right-0 w-72 h-72 bg-primary-lighter/10 rounded-full blur-3xl" />
+    <section className="section bg-neutral-dark relative overflow-hidden">
+      <div data-parallax data-speed="0.15" className="absolute top-40 left-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
+      <div data-parallax data-speed="0.25" className="absolute bottom-40 right-0 w-72 h-72 bg-primary-lighter/5 rounded-full blur-3xl" />
 
       <div className="container-custom">
         <motion.div
@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="badge bg-primary-pale text-primary border border-primary/10 mb-4">Why Choose Us</span>
+          <span className="badge-dark mb-4">Why Choose Us</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-secondary mt-3">
             Families Trust <span className="gradient-text">SMS Home Care</span>
           </h2>
@@ -75,7 +75,7 @@ export default function WhyChooseUs() {
               transition={{ duration: 0.4, delay: i * 0.08 }}
               className="group card p-6 sm:p-7 cursor-default relative overflow-hidden"
             >
-              <div className={`absolute top-0 right-0 w-24 h-24 ${card.bgLight} rounded-bl-full -mr-8 -mt-8 transition-all duration-500 group-hover:scale-150`} />
+              <div className={`absolute top-0 right-0 w-24 h-24 ${card.bgLight} rounded-bl-full -mr-8 -mt-8 transition-all duration-500 group-hover:scale-150 opacity-20`} />
               <div className="relative z-10">
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${card.color} p-2.5 mb-4 shadow-md`}>
                   <card.icon className="w-full h-full text-white" />

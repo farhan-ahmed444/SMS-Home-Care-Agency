@@ -21,8 +21,8 @@ const stepVariants = {
 
 export default function CareProcess() {
   return (
-    <section id="process" className="section bg-primary-washed relative overflow-hidden">
-      <div data-parallax data-speed="0.1" className="absolute top-10 left-1/2 -translate-x-1/2 w-[60rem] h-[60rem] bg-primary-pale/20 rounded-full blur-3xl" />
+    <section id="process" className="section bg-surface-dark relative overflow-hidden">
+      <div data-parallax data-speed="0.1" className="absolute top-10 left-1/2 -translate-x-1/2 w-[60rem] h-[60rem] bg-primary/5 rounded-full blur-3xl" />
 
       <div className="container-custom">
         <motion.div
@@ -32,7 +32,7 @@ export default function CareProcess() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="badge bg-primary-pale text-primary border border-primary/10 mb-4">Our Process</span>
+          <span className="badge-dark mb-4">Our Process</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-secondary mt-3">
             How We <span className="gradient-text">Get Started</span>
           </h2>
@@ -42,7 +42,7 @@ export default function CareProcess() {
         </motion.div>
 
         <div className="relative">
-          <div className="hidden lg:block absolute top-8 left-[10%] right-[10%] h-px bg-neutral-dark">
+          <div className="hidden lg:block absolute top-8 left-[10%] right-[10%] h-px bg-primary-lighter/20">
             <div data-progress className="h-full gradient-bg origin-left" style={{ transformOrigin: "left" }} />
           </div>
 

@@ -16,18 +16,19 @@ export default {
           dark: "#5B21B6",
         },
         secondary: {
-          DEFAULT: "#111827",
-          light: "#1F2937",
-          lighter: "#374151",
+          DEFAULT: "#F8F7FC",
+          light: "#E5E0F0",
+          lighter: "#B8B0CC",
         },
         neutral: {
-          DEFAULT: "#F8F7FC",
-          light: "#FCFCFF",
-          dark: "#E5E4ED",
+          DEFAULT: "#1A142B",
+          light: "#231B38",
+          dark: "#120D1F",
         },
         surface: {
-          DEFAULT: "#FFFFFF",
-          muted: "#F9FAFB",
+          DEFAULT: "#231B38",
+          muted: "#1A142B",
+          dark: "#0B0716",
         }
       },
       fontFamily: {
@@ -40,10 +41,10 @@ export default {
         "display-sm": ["3rem", { lineHeight: "1.2", fontWeight: "700" }],
       },
       boxShadow: {
-        "soft": "0 2px 15px -3px rgba(0, 0, 0, 0.06), 0 10px 20px -2px rgba(0, 0, 0, 0.04)",
-        "card": "0 4px 20px -2px rgba(109, 40, 217, 0.08)",
-        "card-hover": "0 20px 40px -8px rgba(109, 40, 217, 0.15)",
-        "elevated": "0 25px 50px -12px rgba(0, 0, 0, 0.15)",
+        "soft": "0 2px 15px -3px rgba(0, 0, 0, 0.3), 0 10px 20px -2px rgba(0, 0, 0, 0.2)",
+        "card": "0 4px 20px -2px rgba(0, 0, 0, 0.4)",
+        "card-hover": "0 20px 40px -8px rgba(109, 40, 217, 0.3)",
+        "elevated": "0 25px 50px -12px rgba(0, 0, 0, 0.5)",
       },
       animation: {
         "fade-up": "fadeUp 0.6s ease-out forwards",

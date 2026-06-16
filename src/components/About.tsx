@@ -10,9 +10,9 @@ const stats = [
 
 export default function About() {
   return (
-    <section id="about" className="section bg-primary-pale/70 relative overflow-hidden">
-      <div data-parallax data-speed="0.15" className="absolute -top-40 -right-40 w-80 h-80 bg-primary-lighter/5 rounded-full blur-3xl" />
-      <div data-parallax data-speed="0.3" className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-pale/20 rounded-full blur-3xl" />
+    <section id="about" className="section bg-surface-dark relative overflow-hidden">
+      <div data-parallax data-speed="0.15" className="absolute -top-40 -right-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
+      <div data-parallax data-speed="0.3" className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
 
       <div className="container-custom">
         <motion.div
@@ -22,7 +22,7 @@ export default function About() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="badge bg-primary-pale text-primary border border-primary/10 mb-4">About Us</span>
+          <span className="badge-dark mb-4">About Us</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-secondary mt-3">
             Dedicated to <span className="gradient-text">Exceptional Care</span>
           </h2>
@@ -47,7 +47,7 @@ export default function About() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/30 to-transparent" />
               </div>
-              <div className="absolute -bottom-5 -right-5 bg-white/80 backdrop-blur-sm rounded-xl shadow-card p-4 border border-primary-pale/30 hidden sm:block">
+              <div className="absolute -bottom-5 -right-5 bg-neutral-light/80 backdrop-blur-sm rounded-xl shadow-card p-4 border border-primary-lighter/10 hidden sm:block">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full gradient-bg flex items-center justify-center">
                     <Phone className="w-5 h-5 text-white" />
@@ -92,7 +92,7 @@ export default function About() {
                 "Family-centered communication and transparency",
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-primary-pale flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-0.5">
                     <Heart className="w-3 h-3 text-primary" />
                   </div>
                   <span className="text-sm text-secondary-lighter/70">{item}</span>

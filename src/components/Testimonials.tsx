@@ -39,8 +39,8 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="section bg-primary-washed relative overflow-hidden">
-      <div data-parallax data-speed="0.1" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-primary-pale/20 rounded-full blur-3xl" />
+    <section id="testimonials" className="section bg-neutral-dark relative overflow-hidden">
+      <div data-parallax data-speed="0.1" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-primary/10 rounded-full blur-3xl" />
 
       <div className="container-custom">
         <motion.div
@@ -50,7 +50,7 @@ export default function Testimonials() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <span className="badge bg-primary-pale text-primary border border-primary/10 mb-4">Testimonials</span>
+          <span className="badge-dark mb-4">Testimonials</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-secondary mt-3">
             What Families <span className="gradient-text">Say About Us</span>
           </h2>

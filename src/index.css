@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply font-body text-secondary bg-primary-washed text-base antialiased;
+    @apply font-body text-secondary bg-surface-dark text-base antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -29,15 +29,19 @@
     @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium;
   }
 
+  .badge-dark {
+    @apply badge bg-neutral border border-primary-lighter/20 text-primary-lighter;
+  }
+
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl gradient-bg text-white font-semibold 
-           shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 
+           shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-0.5 
            transition-all duration-300;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border-2 border-primary/20 text-secondary 
-           font-semibold hover:bg-primary-pale hover:border-primary/40 transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border-2 border-primary-lighter/30 text-secondary-light 
+           font-semibold hover:bg-primary/20 hover:border-primary-light transition-all duration-300;
   }
 
   .section {
@@ -49,7 +53,7 @@
   }
 
   .card {
-    @apply bg-white/80 rounded-2xl border border-primary-pale/30 shadow-soft hover:shadow-card-hover 
+    @apply bg-neutral-light/60 rounded-2xl border border-primary-lighter/10 shadow-soft hover:shadow-card-hover 
            backdrop-blur-sm transition-all duration-300;
   }
 

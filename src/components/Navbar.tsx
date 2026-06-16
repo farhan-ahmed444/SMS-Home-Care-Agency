@@ -27,7 +27,7 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
-        scrolled ? "bg-white/90 backdrop-blur-md shadow-soft" : "bg-transparent"
+        scrolled ? "bg-neutral-light/90 backdrop-blur-md shadow-soft" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,7 +68,7 @@ export default function Navbar() {
             </a>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-primary-pale/50 transition-colors"
+              className="lg:hidden p-2 rounded-lg hover:bg-primary/10 transition-colors"
               aria-label="Toggle menu"
             >
               {mobileOpen ? <X className="w-5 h-5 text-secondary" /> : <Menu className="w-5 h-5 text-secondary" />}
@@ -84,7 +84,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="lg:hidden bg-white border-t border-neutral-dark/20 overflow-hidden"
+              className="lg:hidden bg-neutral-light border-t border-primary-lighter/20 overflow-hidden"
           >
             <div className="px-4 py-5 space-y-1">
               {navLinks.map((link) => (
@@ -92,7 +92,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block px-3 py-2.5 rounded-lg text-secondary-lighter hover:text-primary hover:bg-primary-pale/30 font-medium transition-colors text-sm"
+                  className="block px-3 py-2.5 rounded-lg text-secondary-lighter hover:text-primary hover:bg-primary/10 font-medium transition-colors text-sm"
                 >
                   {link.label}
                 </a>
@@ -100,7 +100,7 @@ export default function Navbar() {
               <div className="pt-3 space-y-2">
                 <a
                   href="tel:+1"
-                  className="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-primary-pale/50 text-primary font-medium text-sm"
+                  className="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-primary/20 text-primary-light font-medium text-sm"
                 >
                   <Phone className="w-4 h-4" /> (203) 555-0123
                 </a>

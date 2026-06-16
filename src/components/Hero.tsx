@@ -26,11 +26,11 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-primary-pale">
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-surface-dark">
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-pale via-primary-washed to-primary-pale/80 z-10" />
-        <div data-parallax data-speed="0.2" className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-primary-lighter/10 rounded-full blur-3xl" />
-        <div data-parallax data-speed="0.4" className="absolute bottom-0 left-0 w-[30rem] h-[30rem] bg-primary-pale/30 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-br from-surface-dark via-neutral-dark to-surface-dark z-10" />
+        <div data-parallax data-speed="0.2" className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-primary/10 rounded-full blur-3xl" />
+        <div data-parallax data-speed="0.4" className="absolute bottom-0 left-0 w-[30rem] h-[30rem] bg-primary/5 rounded-full blur-3xl" />
         <div
           ref={bgRef}
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
@@ -42,7 +42,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-5 gap-12 items-center">
           <div className="lg:col-span-3">
             <div data-reveal data-delay="0">
-              <span className="badge bg-primary-pale text-primary border border-primary/10">
+              <span className="badge-dark mb-4">
                 <Heart className="w-3.5 h-3.5" />
                 Premium Home Care Services
               </span>
@@ -79,7 +79,7 @@ export default function Hero() {
               className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3"
             >
               {features.map((f) => (
-                <div key={f.label} className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white/60 border border-primary-pale/30 shadow-soft">
+                <div key={f.label} className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-neutral/60 border border-primary-lighter/10 shadow-soft">
                   <f.icon className="w-4 h-4 text-primary shrink-0" />
                   <span className="text-xs font-semibold text-secondary">{f.label}</span>
                 </div>
@@ -99,7 +99,7 @@ export default function Hero() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 via-transparent to-transparent" />
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-white/90 backdrop-blur-sm rounded-xl shadow-card p-4 border border-primary/10">
+              <div className="absolute -bottom-4 -left-4 bg-neutral-light/90 backdrop-blur-sm rounded-xl shadow-card p-4 border border-primary-lighter/15">
                 <div className="flex items-center gap-3">
                   <div className="w-11 h-11 rounded-lg gradient-bg flex items-center justify-center">
                     <ShieldCheck className="w-5 h-5 text-white" />

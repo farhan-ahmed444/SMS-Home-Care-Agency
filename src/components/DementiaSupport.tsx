@@ -12,8 +12,8 @@ const features = [
 
 export default function DementiaSupport() {
   return (
-    <section className="section bg-primary-pale/70 relative overflow-hidden">
-      <div data-parallax data-speed="0.2" className="absolute inset-0 bg-gradient-to-br from-primary-pale/30 via-transparent to-primary-lighter/10" />
+    <section className="section bg-surface-dark/80 relative overflow-hidden">
+      <div data-parallax data-speed="0.2" className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary-lighter/5" />
 
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -23,7 +23,7 @@ export default function DementiaSupport() {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5 }}
           >
-            <span className="badge bg-primary-pale text-primary border border-primary/10 mb-4">Dementia & Family Support</span>
+            <span className="badge-dark mb-4">Dementia & Family Support</span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-secondary mt-3 mb-5">
               Specialized <span className="gradient-text">Memory Care</span> Support
             </h2>
@@ -70,7 +70,7 @@ export default function DementiaSupport() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 to-transparent" />
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-card p-4 border border-primary-pale/30 max-w-[220px]">
+              <div className="absolute -bottom-4 -left-4 bg-neutral-light/80 backdrop-blur-sm rounded-xl shadow-card p-4 border border-primary-lighter/10 max-w-[220px]">
                 <div className="flex items-center gap-2 font-semibold text-primary mb-1">
                   <Heart className="w-4 h-4" fill="#6D28D9" />
                   <span className="text-sm">Memory Care Certified</span>

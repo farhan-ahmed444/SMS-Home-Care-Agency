@@ -16,9 +16,9 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="section bg-primary-pale relative overflow-hidden">
-      <div data-parallax data-speed="0.15" className="absolute top-0 right-0 w-96 h-96 bg-primary-lighter/5 rounded-full blur-3xl" />
-      <div data-parallax data-speed="0.3" className="absolute bottom-0 left-0 w-72 h-72 bg-primary-pale/20 rounded-full blur-3xl" />
+    <section id="services" className="section bg-neutral-dark relative overflow-hidden">
+      <div data-parallax data-speed="0.15" className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      <div data-parallax data-speed="0.3" className="absolute bottom-0 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
 
       <div className="container-custom">
         <motion.div
@@ -28,7 +28,7 @@ export default function Services() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="badge bg-primary-pale text-primary border border-primary/10 mb-4">Our Services</span>
+          <span className="badge-dark mb-4">Our Services</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-secondary mt-3">
             Comprehensive <span className="gradient-text">Home Care</span>
           </h2>
