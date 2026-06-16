@@ -1,5 +1,5 @@
-import { useState, useRef } from "react";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
 
 const testimonials = [
@@ -28,8 +28,6 @@ const testimonials = [
 export default function Testimonials() {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   const next = () => { setDirection(1); setCurrent((p) => (p + 1) % testimonials.length); };
   const prev = () => { setDirection(-1); setCurrent((p) => (p - 1 + testimonials.length) % testimonials.length); };
@@ -42,20 +40,15 @@ export default function Testimonials() {
 
   return (
     <section id="testimonials" className="section bg-primary-pale/20 relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-primary-pale/20 rounded-full blur-3xl" />
+      <div data-parallax data-speed="0.1" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-primary-pale/20 rounded-full blur-3xl" />
 
-      <div className="container-custom" ref={ref}>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-14"
-        >
+      <div className="container-custom">
+        <div data-reveal className="text-center mb-14">
           <span className="badge bg-primary-pale text-primary border border-primary/10 mb-4">Testimonials</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-secondary mt-3">
             What Families <span className="gradient-text">Say About Us</span>
           </h2>
-        </motion.div>
+        </div>
 
         <div className="max-w-2xl mx-auto">
           <div className="relative min-h-[260px]">

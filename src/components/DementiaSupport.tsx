@@ -1,5 +1,3 @@
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
 import { Brain, Shield, Clock, Heart, MessageCircle, Sparkles } from "lucide-react";
 
 const features = [
@@ -12,20 +10,13 @@ const features = [
 ];
 
 export default function DementiaSupport() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-
   return (
     <section className="section bg-primary-pale/35 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-pale/30 via-transparent to-primary-lighter/10" />
+      <div data-parallax data-speed="0.2" className="absolute inset-0 bg-gradient-to-br from-primary-pale/30 via-transparent to-primary-lighter/10" />
 
-      <div className="container-custom" ref={ref}>
+      <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.5 }}
-          >
+          <div data-reveal>
             <span className="badge bg-primary-pale text-primary border border-primary/10 mb-4">Dementia & Family Support</span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-secondary mt-3 mb-5">
               Specialized <span className="gradient-text">Memory Care</span> Support
@@ -36,15 +27,9 @@ export default function DementiaSupport() {
               maintain their quality of life while giving families the peace of mind they deserve.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-3">
-              {features.map((f, i) => (
-                <motion.div
-                  key={f.title}
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.3, delay: 0.2 + i * 0.06 }}
-                  className="card p-4 flex items-start gap-3"
-                >
+            <div data-stagger="0.06" className="grid sm:grid-cols-2 gap-3">
+              {features.map((f) => (
+                <div key={f.title} className="card p-4 flex items-start gap-3">
                   <div className="w-9 h-9 rounded-lg gradient-bg p-2 shrink-0">
                     <f.icon className="w-full h-full text-white" />
                   </div>
@@ -52,16 +37,12 @@ export default function DementiaSupport() {
                     <h4 className="text-sm font-bold text-secondary">{f.title}</h4>
                     <p className="text-xs text-secondary-lighter/60 mt-0.5">{f.description}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.15 }}
-          >
+          <div data-reveal data-delay="0.15">
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-elevated">
                 <img
@@ -81,7 +62,7 @@ export default function DementiaSupport() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

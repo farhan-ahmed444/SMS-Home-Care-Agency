@@ -1,5 +1,5 @@
-import { useState, useRef } from "react";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
 
 const faqs = [
@@ -31,31 +31,21 @@ const faqs = [
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
     <section className="section bg-primary-pale/35 relative overflow-hidden">
-      <div className="container-custom max-w-3xl" ref={ref}>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-14"
-        >
+      <div className="container-custom max-w-3xl">
+        <div data-reveal className="text-center mb-14">
           <span className="badge bg-primary-pale text-primary border border-primary/10 mb-4">FAQ</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-secondary mt-3">
             Frequently Asked <span className="gradient-text">Questions</span>
           </h2>
-        </motion.div>
+        </div>
 
-        <div className="space-y-3">
+        <div data-stagger="0.05" className="space-y-3">
           {faqs.map((faq, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, y: 12 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.3, delay: i * 0.05 }}
               className="card overflow-hidden"
             >
               <button
@@ -83,10 +73,10 @@ export default function FAQ() {
                         {faq.a}
                       </p>
                     </div>
-                  </motion.div>
+        </motion.div>
                 )}
               </AnimatePresence>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

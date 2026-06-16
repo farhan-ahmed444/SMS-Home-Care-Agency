@@ -1,5 +1,4 @@
-import { useState, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { useState } from "react";
 import { MapPin, Mail, Phone, Send, CheckCircle, Loader2 } from "lucide-react";
 
 interface FormData {
@@ -16,8 +15,6 @@ export default function Contact() {
   const [form, setForm] = useState<FormData>(initialForm);
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   const validate = (): boolean => {
     const e: Partial<FormData> = {};
@@ -44,16 +41,11 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section bg-primary-pale/35 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-80 h-80 bg-primary-lighter/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-60 h-60 bg-primary-pale/20 rounded-full blur-3xl" />
+      <div data-parallax data-speed="0.15" className="absolute top-0 right-0 w-80 h-80 bg-primary-lighter/5 rounded-full blur-3xl" />
+      <div data-parallax data-speed="0.3" className="absolute bottom-0 left-0 w-60 h-60 bg-primary-pale/20 rounded-full blur-3xl" />
 
-      <div className="container-custom" ref={ref}>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-14"
-        >
+      <div className="container-custom">
+        <div data-reveal className="text-center mb-14">
           <span className="badge bg-primary-pale text-primary border border-primary/10 mb-4">Contact Us</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-secondary mt-3">
             Let's Discuss Your <span className="gradient-text">Care Needs</span>
@@ -61,13 +53,10 @@ export default function Contact() {
           <p className="mt-4 text-lg text-secondary-lighter/70 max-w-2xl mx-auto">
             Reach out today for a free consultation. We're here to answer your questions and help you find the perfect care solution.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid lg:grid-cols-5 gap-10 max-w-5xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.1 }}
+          <div data-reveal data-delay="0.1"
             className="lg:col-span-2 space-y-5"
           >
             <div className="card-lg">
@@ -124,12 +113,9 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.15 }}
+          <div data-reveal data-delay="0.15"
             className="lg:col-span-3"
           >
             <form onSubmit={handleSubmit} className="card-lg space-y-4">
@@ -193,7 +179,7 @@ export default function Contact() {
                 )}
               </button>
             </form>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

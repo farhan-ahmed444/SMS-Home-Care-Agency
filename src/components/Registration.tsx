@@ -1,5 +1,3 @@
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
 import { ShieldCheck, BadgeCheck, GraduationCap, Heart, Users, Star } from "lucide-react";
 
 const trustItems = [
@@ -10,32 +8,21 @@ const trustItems = [
 ];
 
 export default function Registration() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-
   return (
     <section className="section bg-primary-pale/20 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary-lighter/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-primary-pale/20 rounded-full blur-3xl" />
+      <div data-parallax data-speed="0.15" className="absolute top-0 right-0 w-96 h-96 bg-primary-lighter/5 rounded-full blur-3xl" />
+      <div data-parallax data-speed="0.3" className="absolute bottom-0 left-0 w-72 h-72 bg-primary-pale/20 rounded-full blur-3xl" />
 
-      <div className="container-custom" ref={ref}>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-14"
-        >
+      <div className="container-custom">
+        <div data-reveal className="text-center mb-14">
           <span className="badge bg-primary-pale text-primary border border-primary/10 mb-4">Trust & Compliance</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-secondary mt-3">
             Licensed, Certified, <span className="gradient-text">Trusted</span>
           </h2>
-        </motion.div>
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.1 }}
+          <div data-reveal data-delay="0.1"
             className="card-lg"
           >
             <div className="flex items-center gap-4 mb-6">
@@ -64,15 +51,12 @@ export default function Registration() {
               of Consumer Protection as a licensed home care agency. We maintain full compliance
               with all state regulations and industry standards.
             </p>
-          </motion.div>
+          </div>
 
-          <div className="space-y-4">
-            {trustItems.map((item, i) => (
-              <motion.div
-                key={item.label}
-                initial={{ opacity: 0, y: 15 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.35, delay: 0.2 + i * 0.08 }}
+          <div data-stagger="0.08" className="space-y-4">
+            {trustItems.map((item) => (
+            <div
+              key={item.label}
                 className="card p-5 flex items-center gap-4"
               >
                 <div className="w-11 h-11 rounded-xl gradient-bg p-2.5 shrink-0">
@@ -81,8 +65,8 @@ export default function Registration() {
                 <div>
                   <h4 className="font-bold text-secondary text-sm">{item.label}</h4>
                   <p className="text-xs text-secondary-lighter/60 mt-0.5">{item.desc}</p>
-                </div>
-              </motion.div>
+              </div>
+            </div>
             ))}
           </div>
         </div>
