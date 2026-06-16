@@ -69,7 +69,7 @@ export default function CareProcess() {
                   >
                     <step.icon className="w-7 h-7 text-white" />
                   </motion.div>
-                  <span className="absolute -top-1.5 -right-1.5 w-7 h-7 rounded-full bg-white/90 border-2 border-primary text-primary text-xs font-bold flex items-center justify-center shadow-md">
+                  <span className="absolute -top-1.5 -right-1.5 w-7 h-7 rounded-full bg-neutral-light/90 border-2 border-primary-lighter text-primary-light text-xs font-bold flex items-center justify-center shadow-md">
                     {i + 1}
                   </span>
                 </div>

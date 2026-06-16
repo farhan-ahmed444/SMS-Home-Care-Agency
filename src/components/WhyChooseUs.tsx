@@ -8,37 +8,37 @@ const cards = [
     icon: Heart, title: "Personalized Care",
     description: "Tailored care plans designed around each client's unique needs, preferences, and lifestyle.",
     color: "from-primary to-primary-light",
-    bgLight: "bg-primary-pale/60",
+    bgLight: "bg-primary/20",
   },
   {
     icon: Users, title: "Compassionate Caregivers",
     description: "Professional and caring staff who treat every client with the dignity and respect they deserve.",
     color: "from-violet-500 to-purple-500",
-    bgLight: "bg-violet-50",
+    bgLight: "bg-violet-900/30",
   },
   {
     icon: Brain, title: "Dementia Support",
     description: "Specialized memory-care assistance from trained professionals who understand cognitive challenges.",
     color: "from-blue-500 to-indigo-500",
-    bgLight: "bg-blue-50",
+    bgLight: "bg-blue-900/30",
   },
   {
     icon: Calendar, title: "Flexible Scheduling",
     description: "Hourly, daily, or overnight support that adapts to your family's changing needs and routines.",
     color: "from-teal-500 to-cyan-500",
-    bgLight: "bg-teal-50",
+    bgLight: "bg-teal-900/30",
   },
   {
     icon: ShieldCheck, title: "Safety & Compliance",
     description: "Strict screening, ongoing training, and full regulatory compliance for complete peace of mind.",
     color: "from-amber-500 to-orange-500",
-    bgLight: "bg-amber-50",
+    bgLight: "bg-amber-900/30",
   },
   {
     icon: MessageCircle, title: "Family Communication",
     description: "Regular updates, transparent reporting, and open dialogue between caregivers and families.",
     color: "from-emerald-500 to-green-500",
-    bgLight: "bg-emerald-50",
+    bgLight: "bg-emerald-900/30",
   },
 ];
 
