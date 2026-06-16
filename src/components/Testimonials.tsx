@@ -39,7 +39,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="section bg-primary-pale/20 relative overflow-hidden">
+    <section id="testimonials" className="section bg-primary-washed relative overflow-hidden">
       <div data-parallax data-speed="0.1" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-primary-pale/20 rounded-full blur-3xl" />
 
       <div className="container-custom">

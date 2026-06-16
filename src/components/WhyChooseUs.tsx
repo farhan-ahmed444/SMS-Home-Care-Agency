@@ -43,7 +43,7 @@ const cards = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="section bg-primary-pale/20 relative overflow-hidden">
+    <section className="section bg-primary-washed relative overflow-hidden">
       <div data-parallax data-speed="0.15" className="absolute top-40 left-0 w-72 h-72 bg-primary-pale/30 rounded-full blur-3xl" />
       <div data-parallax data-speed="0.25" className="absolute bottom-40 right-0 w-72 h-72 bg-primary-lighter/10 rounded-full blur-3xl" />
 

@@ -26,9 +26,9 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-primary-pale/20">
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-primary-pale">
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-pale/50 via-primary-pale/20 to-primary-pale/30 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-pale via-primary-washed to-primary-pale/80 z-10" />
         <div data-parallax data-speed="0.2" className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-primary-lighter/10 rounded-full blur-3xl" />
         <div data-parallax data-speed="0.4" className="absolute bottom-0 left-0 w-[30rem] h-[30rem] bg-primary-pale/30 rounded-full blur-3xl" />
         <div
@@ -99,7 +99,7 @@ export default function Hero() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 via-transparent to-transparent" />
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-card p-4 border border-primary-pale/30">
+              <div className="absolute -bottom-4 -left-4 bg-white/90 backdrop-blur-sm rounded-xl shadow-card p-4 border border-primary/10">
                 <div className="flex items-center gap-3">
                   <div className="w-11 h-11 rounded-lg gradient-bg flex items-center justify-center">
                     <ShieldCheck className="w-5 h-5 text-white" />

@@ -11,7 +11,7 @@ const features = [
 
 export default function DementiaSupport() {
   return (
-    <section className="section bg-primary-pale/35 relative overflow-hidden">
+    <section className="section bg-primary-pale/70 relative overflow-hidden">
       <div data-parallax data-speed="0.2" className="absolute inset-0 bg-gradient-to-br from-primary-pale/30 via-transparent to-primary-lighter/10" />
 
       <div className="container-custom">

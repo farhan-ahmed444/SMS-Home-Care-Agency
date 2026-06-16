@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply font-body text-secondary bg-primary-pale/20 text-base antialiased;
+    @apply font-body text-secondary bg-primary-washed text-base antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {

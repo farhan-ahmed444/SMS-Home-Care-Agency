@@ -9,7 +9,7 @@ const stats = [
 
 export default function About() {
   return (
-    <section id="about" className="section bg-primary-pale/35 relative overflow-hidden">
+    <section id="about" className="section bg-primary-pale/70 relative overflow-hidden">
       <div data-parallax data-speed="0.15" className="absolute -top-40 -right-40 w-80 h-80 bg-primary-lighter/5 rounded-full blur-3xl" />
       <div data-parallax data-speed="0.3" className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-pale/20 rounded-full blur-3xl" />
 

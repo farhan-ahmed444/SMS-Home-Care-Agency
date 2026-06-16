@@ -33,7 +33,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="section bg-primary-pale/35 relative overflow-hidden">
+    <section className="section bg-primary-washed relative overflow-hidden">
       <div className="container-custom max-w-3xl">
         <div data-reveal className="text-center mb-14">
           <span className="badge bg-primary-pale text-primary border border-primary/10 mb-4">FAQ</span>

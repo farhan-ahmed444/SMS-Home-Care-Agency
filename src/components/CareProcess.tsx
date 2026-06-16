@@ -10,7 +10,7 @@ const steps = [
 
 export default function CareProcess() {
   return (
-    <section id="process" className="section bg-primary-pale/35 relative overflow-hidden">
+    <section id="process" className="section bg-primary-washed relative overflow-hidden">
       <div data-parallax data-speed="0.1" className="absolute top-10 left-1/2 -translate-x-1/2 w-[60rem] h-[60rem] bg-primary-pale/20 rounded-full blur-3xl" />
 
       <div className="container-custom">
